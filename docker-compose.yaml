@@ -1,0 +1,42 @@
+services:
+  web-server:
+    build:
+      dockerfile: php.Dockerfile
+      context: .
+    restart: always
+    volumes:
+      - "./:/var/www/html/"
+      - "./.htaccess:/var/www/html/.htaccess"
+      - "./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini" #custom php config, used for upload filesize at the moment
+    ports:
+      - "80:80"
+    depends_on:
+      - mysql-server
+
+  mysql-server:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-uroot", "-psecret"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    command:
+      ['--default-time-zone=-07:00']
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5.0.1
+    restart: always
+    environment:
+      PMA_HOST: mysql-server
+      PMA_USER: root
+      PMA_PASSWORD: secret
+    ports:
+      - "50:80"
+    depends_on:
+      - mysql-server
+
+volumes:
+  mysql-data:
