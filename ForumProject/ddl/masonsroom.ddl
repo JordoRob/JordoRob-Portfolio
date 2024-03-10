@@ -150,14 +150,14 @@ VALUES(
 ),(
     "business",
     "img/topics/business.png",
-    "This board is for the people who make more than they deserve!"
+    "I don't know any business quotes!"
 ),(
     "software",
     "img/topics/software.png",
     "Hello World!"
 ),(
     "wall Street",
-    "img/topics/wallStreet.png",
+    "img/topics/wallstreet.png",
     "'Nobody Knows If A Stock's Going Up, Down Or F***ing Sideways, Least Of All Stockbrokers. But We Have To Pretend We Know.' -Wolf of Wall Street"
 ),(
     "cars",
