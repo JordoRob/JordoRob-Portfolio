@@ -19,10 +19,15 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font-family: 'Bauhaus 93', sans-serif;
+	font-size: 1.5vw;
+font-family: "Avenir", sans-serif;
+font-weight: bold;
 	vertical-align: baseline;
     text-decoration: none;
+}
+.bauhaus *, .bauhaus{
+    font-family: 'Bauhaus 93', sans-serif;
+    font-weight: normal;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -117,12 +122,15 @@ table {
     margin:24px;
     border:3px solid black;
     overflow:auto;
-
+    height:95%;
 }
-.nav-column-header{
-    font-size:3vw;
+.nav-column-header-text{
+    font-size:2em;
     color:#152414;
     text-align:right;
+}
+.nav-column-header{
+text-align: right;
 }
 .hello{
     font-size:8vw;
@@ -159,7 +167,7 @@ table {
     display:flex;
     flex-direction:column;
     justify-content:space-between;
-    gap:5em;
+    gap:1.5em;
 }
 .container-2{
     display:block;

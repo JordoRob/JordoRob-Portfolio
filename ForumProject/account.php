@@ -191,7 +191,7 @@ if(isset($_GET["id"])){
             $result = $sql->get_result();
             if (mysqli_num_rows($result) > 0) {
                 echo ("<table class=\"accountTable\" id='accountTable'><thead><tr><th></th><th>User</th><th>Title</th><th>Board</th><th>Score</th><th>Replies");
-                if($userExists){
+                if($userExists&&$ownAccount){
                     echo("</th><th>Delete</th></tr></thead><tbody class=\"accountBody\">");
                 }else{
                     echo("</th></thead></tr><tbody class=\"accountBody\">");
@@ -220,7 +220,7 @@ if(isset($_GET["id"])){
                     echo("<td>" . $topic . "</td>");
                     echo("<td class='score'>" . $score . "</td><td>" . $replies . "</td>");
 
-                    if($userExists){
+                    if($userExists&&$ownAccount){
                         if($isDeleted){
                             echo ("<td><a href=# class='admin-buttons innerbox' title='Delete Post'>X</a>");
                         }else{
@@ -253,11 +253,13 @@ if(isset($_GET["id"])){
             document.getElementById("posts").style.display="block";
             document.getElementById("replies").style.display="none";
             document.getElementById("showRepliesandPosts").onclick=showReplies;
+            document.getElementById("showRepliesandPosts").innerHTML="Show Replies";
         }
         function showReplies(){
             document.getElementById("posts").style.display="none";
             document.getElementById("replies").style.display="block";
             document.getElementById("showRepliesandPosts").onclick=showPosts;
+            document.getElementById("showRepliesandPosts").innerHTML="Show Posts";
         }
 
 

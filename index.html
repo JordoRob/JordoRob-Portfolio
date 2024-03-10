@@ -3,12 +3,17 @@
 <head>
     <title>My Portfolio Website</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 </head>
 <body>
     <div class="main">
-        <div class='main-column'>
+        <div class='main-column' data-simplebar>
             <div class="container-1">  
-                    <span class="hello">Hello!
+                    <span class="hello bauhaus">Hello!
                     <figure>
                         <img src="assets/me.jpg" alt="Jordan Roberts" class="profile-image">
                         <!-- <figcaption>Me</figcaption> -->
@@ -16,9 +21,10 @@
                     
                 </span>
             
-                    <span class="main-text-left">I'm Jordan Roberts, a Junior Software Developer based out of British Columbia, Canada</span>
-                    <span class="main-text-right">On the right you will find a couple of links to things I've done
+                    <span class="main-text-left bauhaus">I'm Jordan Roberts, a Junior Software Developer based out of British Columbia, Canada</span>
+                    <span class="main-text-right bauhaus">On the right you will find a couple of links to things I've done
                        <img src="assets/right-arrow.svg" alt="Arrow" class="arrow"> 
+                       
                     </span>
                 <span class="main-text-left smaller">Professionally my interests are focused around both front and back end Web Development, however I also have
                     extensive experience in Java and Python.
@@ -30,9 +36,10 @@
                 </span>
                 <span class="main-text-right smaller">If I sound like a good fit, or you'd just like to reach out you can email me at <a class='email' href='m&#97;ilto&#58;j%&#54;Fr%64a&#110;&#106;k&#37;72%6Fber%74&#115;&#64;gmail%2Ec%6Fm'>j&#111;rdanjkro&#98;erts&#64;gmai&#108;&#46;c&#111;m</a>.
                 </span>
+                <span class="main-text-left smaller">This site is ran in a dockerized environment hosted on a personal linux-based server</span>
 </div>
     </div>
-        <div class='nav-column'>
+        <div class='nav-column bauhaus'>
             <div class="nav-column-header">
                 <span class="nav-column-header-text">jordorob</span>
             </div>    
@@ -51,9 +58,6 @@
                     </span>
                     <span class="list-item">
                         <a href="JunkCollector/index.html">Junk Collector</a>
-                    </span>
-                    <span class="list-item">
-                        <a href="ForumProject/home.php">Project</a>
                     </span>
                 </div>
            </div>
